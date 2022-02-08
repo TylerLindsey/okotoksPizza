@@ -1,0 +1,77 @@
+body {
+  background-color:rgb(204, 201, 9)
+}
+
+h1 {
+  background-color: 
+  rgb(228, 17, 17);
+}
+
+h1{
+  color: rgb(204, 201, 9);
+}
+
+section div {
+  font-family: 'Times New Roman';
+}
+
+div > h1:first-child {
+  background-color: rgb(75, 19, 226);
+} 
+
+mark ~ h1 {
+  font-weight: bold;
+}/*Isn't changing anything, I tried #title too but it wouldn't do anything*/
+
+a:link {
+  color: rgb(75, 19, 226);
+}
+
+a:visited {
+  color: rgb(128, 0, 0);
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: rgb(75, 19, 226);
+  font-size: 1.5em;
+} /*this section changes the color of the nav hyperlinks, but it only works on the homepage. I NEED TO FIX THIS
+*/
+
+a:active {
+  color: hotpink
+}
+
+/*below are several things I tried to apply the adjacent combinator to but got no changes. 
+div + span {
+font-family: fantasy;
+}
+
+
+
+section + div {
+  font-size: larger;
+}
+header + section {
+  background-color: rgb(86, 255, 80);
+}
+ 
+#header {
+  border: 2px dashed rgb(255, 0, 85);
+} this section didnt change anything for some reason 
+
+CHILD SELECTOR
+selector>selector {
+}
+nav>a {
+}
+So any a tag directly inside of a nav tag will be styled here.CHILD SELECTOR
+
+use this to increase size on "Welcome to Okotoks Pizza! on home page
+title{
+  font-size: larger;
+}
+I can't get the page to react
+
+*/
+
