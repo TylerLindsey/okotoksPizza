@@ -14,17 +14,17 @@ h1{
 section div {
   font-family: 'Times New Roman';
 }
-
+/*
 div > h1:first-child {
   background-color: rgb(75, 19, 226);
 } 
 
-mark ~ h1 {
+mark + h1 {
   font-weight: bold;
-}/*Isn't changing anything, I tried #title too but it wouldn't do anything*/
+}Isn't changing anything, I tried #title i front of mark (to the left) as well as ~ instead of + but it wouldn't do anything*/
 
 a:link {
-  color: rgb(75, 19, 226);
+  color: rgb(204, 201, 9);
 }
 
 a:visited {
@@ -42,36 +42,50 @@ a:active {
   color: hotpink
 }
 
-/*below are several things I tried to apply the adjacent combinator to but got no changes. 
-div + span {
-font-family: fantasy;
+
+
+.menuItems {
+  height: 45vh;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.menuItems {
+  color: rgb(204, 201, 9);
+  font-size: 5rem;
+  text-align: center;
+  padding: 4rem;
+  grid-gap: 1vw;
+}
+.cell1 {
+  background: rgb(75, 19, 226);
+}
+.cell2 {
+  background: rgb(228, 17, 17);
+}
+.cell3 {
+  background: rgb(75, 19, 226);
+}
+.cell4 {
+   background: rgb(228, 17, 17);
+}
+.cell5 {
+  background: rgb(75, 19, 226);
+}
+.cell6 {
+   background: rgb(228, 17, 17);
+}
+.cell7 {
+  background: rgb(75, 19, 226);
+}
+.cell8 {
+  background: rgb(228, 17, 17);
+}
+.cell9 {
+  background: rgb(75, 19, 226);
 }
 
 
-
-section + div {
-  font-size: larger;
-}
-header + section {
-  background-color: rgb(86, 255, 80);
-}
- 
-#header {
-  border: 2px dashed rgb(255, 0, 85);
-} this section didnt change anything for some reason 
-
-CHILD SELECTOR
-selector>selector {
-}
-nav>a {
-}
-So any a tag directly inside of a nav tag will be styled here.CHILD SELECTOR
-
-use this to increase size on "Welcome to Okotoks Pizza! on home page
-title{
-  font-size: larger;
-}
-I can't get the page to react
-
-*/
 
