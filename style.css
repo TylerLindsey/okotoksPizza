@@ -1,3 +1,6 @@
+/*TYLER!!!!!!
+Only do the assignments exactly as described and play around with everything on a mock site so I don't mess up what we did in class, and then for the final assignment properly rebuild the entire site from the ground up with our class example and my experiments as a template. Go from the ground up so that I don't have any old mistakes that I forgot about (or graceful errors) so I submit clean and logical code. */
+
 body {
   background-color:rgb(204, 201, 9)
 }
@@ -8,6 +11,12 @@ h1 {
 }
 
 h1{
+  color: rgb(204, 201, 9);
+}
+
+h2{
+  background-color: 
+  rgb(228, 17, 17);
   color: rgb(204, 201, 9);
 }
 
@@ -41,8 +50,6 @@ a:hover {
 a:active {
   color: hotpink
 }
-
-
 
 .menuItems {
   height: 45vh;
@@ -89,3 +96,73 @@ a:active {
 
 
 
+
+#animated{
+  width: 10vw;
+  height: 10vh;
+  background-color: blue;
+  font-size: 10px;
+  border: 10px solid rgb(128, 0, 0);
+  color: rgb(204, 201, 9);
+  position: inline-block;
+  /*top: 20vh;
+  left: 20vw; these 2 commands are being overwritten by something.*/
+  font-size: ;
+  transition-property: width, height, background-color, font-size;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;}
+
+
+  #animated:hover {
+    width: 90vw;
+    height: 80vh;
+    display: block;
+    font-size: 12em;
+  }
+  #animated:active{
+    background-color: rgb(228, 17, 17);;
+  }
+
+  #specialCharacters{
+    width: 7vw;
+    height: 80vh;
+    display: block;
+    transition-property: width, height, background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+  }
+/*above is the celebrating 30 years animation and below is the 130,000 hours*/
+  #animated2{
+  width: 10vw;
+  height: 10vh;
+  background-color: blue;
+  font-size: 10px;
+  border: 10px solid rgb(128, 0, 0);
+  color: rgb(204, 201, 9);
+  position: inline-block;
+  /*top: 20vh;
+  left: 20vw; these 2 commands are being overwritten by something.*/
+  font-size: ;
+  transition-property: width, height, background-color, font-size;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;}
+
+
+  #animated2:hover {
+    width: 50vw;
+    height: 40vh;
+    display: block;
+    font-size: 6em;
+  }
+  #animated2:active{
+    background-color: rgb(228, 17, 17);;
+  }
+
+  #specialCharacters2{
+    width: 7vw;
+    height: 80vh;
+    display: block;
+    transition-property: width, height, background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+  }
