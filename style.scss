@@ -1,0 +1,440 @@
+/*so redo everything in css to be mobile first and then add sections of min-screen size to do stuff like the 3x3 grid on the menu, but default to a 1x9 grid for mobile
+1. Write CSS rules intended for mobile at the top of our CSS files
+2. Write a media query for tablet sizes in the middle of our CSS files
+3. Write a media query for desktop sizes at the end of our CSS files
+
+below 600 is phone
+above 600-768 is tablet break point
+above ____ is pc*/
+
+/*Below here is the section only on general website information*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import '_color-theme';
+@import '_animation';
+
+
+body {
+  background-color:$yellow-theme;
+}
+
+h1 {
+  background-color: 
+  $red-theme;
+}
+
+h1{
+  color: $yellow-theme;
+}
+
+h2{
+  background-color: $red-theme;
+  color: $yellow-theme;
+}
+
+section div {
+  font-family: 'Times New Roman';
+}
+/*
+div > h1:first-child {
+  background-color: rgb(75, 19, 226);
+} 
+
+mark + h1 {
+  font-weight: bold;
+}Isn't changing anything, I tried #title i front of mark (to the left) as well as ~ instead of + but it wouldn't do anything*/
+
+a:link {
+  color: $yellow-theme;
+}
+
+a:visited {
+  color: rgb(128, 0, 0);
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: $blue-theme;
+  font-size: 1.5em;
+  @include floating-animation();
+} /*this section changes the color of the nav hyperlinks, but it only works on the homepage. I NEED TO FIX THIS
+*/
+
+a:active {
+  color: hotpink
+}
+
+
+
+/*above here is gerneral website information and below here is for the index.html page*/
+
+
+/* this is where I was working on making index.html interactive between devices. 
+
+@media screen and (min-width:601px) {
+
+*/
+
+/*above here is index.html and below here is for the menu page*/
+
+
+
+
+
+
+.cell1 {
+  background: $blue-theme;
+}
+.cell2 {
+  background: $red-theme;
+}
+.cell3 {
+  background: $blue-theme;
+}
+.cell4 {
+   background: $red-theme;
+}
+.cell5 {
+  background: $blue-theme;
+}
+.cell6 {
+   background: $red-theme;
+}
+.cell7 {
+  background: $blue-theme;
+}
+.cell8 {
+  background: $red-theme;
+}
+.cell9 {
+  background: $blue-theme;
+}
+
+.menuItems {
+  color: $yellow-theme;
+  font-size: 3rem;
+  text-align: center;
+  padding: 4rem;
+  grid-gap: 1vw;
+}
+
+@media screen and (min-width:700px) {
+ /* .menuItems {
+      flex: 100%;
+      max-width: 100%; NOT SURE WHAT THIS DOES YET. GOT IT FROM W3 AND IT DIDNT DO ANYTHING INITIALLY. RETEST.
+    }*/
+    .menuItems {
+      height: 45vh;
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1));
+    }/*keep auto fit above because I want cell9 to expand, what can I change max-> 1fr to?*/
+    
+    .menuItems {
+      color: $yellow-theme;
+      font-size: 3rem;
+      text-align: center;
+      padding: 4rem;
+      grid-gap: 1vw;
+    
+    }
+
+ /*    .cell9{
+      display: relative;
+    }  change the vw because the cell needs to stick to the right edge too, so relative?*/
+  } 
+
+  @media screen and (min-width:1229px) {
+    /* .menuItems {
+         flex: 100%;
+         max-width: 100%; NOT SURE WHAT THIS DOES YET. GOT IT FROM W3 AND IT DIDNT DO ANYTHING INITIALLY. RETEST.
+       }*/
+       .menuItems {
+         height: 45vh;
+         margin: 2rem;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         grid-template-columns: repeat(auto-fit, minmax(250px,1));
+       } /*keep auto fit above because I want cell9 to expand*/
+       
+       .menuItems {
+         color: $yellow-theme;
+         font-size: 4rem;
+         text-align: center;
+         padding: 4rem;
+         grid-gap: 1vw;
+       
+       }
+       /*
+       .cell9{
+         
+       }  make this section expand twice as big plus gap, as well as 699px<  */
+     } 
+
+  @media screen and (min-width:1500px) {
+    /* .menuItems {
+         flex: 100%;
+         max-width: 100%; NOT SURE WHAT THIS DOES YET. GOT IT FROM W3 AND IT DIDNT DO ANYTHING INITIALLY. RETEST.
+       }*/
+       .menuItems {
+         height: 45vh;
+         margin: 2rem;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         grid-template-columns: repeat(auto-fll, minmax(250px,1fr));
+       }
+       
+       .menuItems {
+         color: $yellow-theme;
+         font-size: 5rem;
+         text-align: center;
+         padding: 4rem;
+         grid-gap: 1vw;
+       
+       }
+     } 
+
+
+
+
+
+
+
+
+
+
+/*Above here is information on menu. Below here is for the animations on aboutUs*/
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+
+  #animated{
+    width: 25vw;
+    height: 20vh;
+    background-color: blue;
+    font-size: 10px;
+    border: 10px solid rgb(128, 0, 0);
+    color: $yellow-theme;
+    position: inline-block;
+    /*top: 20vh;
+    left: 20vw; these 2 commands are being overwritten by something.*/
+    transition-property: width, height, background-color, font-size;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;}
+
+
+    #animated:hover {
+      width: 50vw;
+      height: 10vh;
+      display: block;
+      font-size: 1.5em;
+    }
+    #animated:active{
+      background-color:$red-theme;
+    }
+
+    #specialCharacters{
+      width: 7vw;
+      height: 80vh;
+      display: block;
+      transition-property: width, height, background-color, font-size;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;
+    }
+  /*above is the celebrating 30 years animation and below is the 130,000 hours*/
+    #animated2{
+    width: 25vw;
+    height: 20vh;
+    background-color: blue;
+    font-size: 10px;
+    border: 10px solid rgb(128, 0, 0);
+    color: $yellow-theme;
+    position: inline-block;
+    /*top: 20vh;
+    left: 20vw; these 2 commands are being overwritten by something.*/
+    transition-property: width, height, background-color, font-size;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;}
+
+
+    #animated2:hover {
+      width: 45vw;
+      height: 40vh;
+      display: block;
+      font-size: 3em;
+    }
+    #animated2:active{
+      background-color: $red-theme;
+    }
+
+    #specialCharacters2{
+      width: 7vw;
+      height: 80vh;
+      display: block;
+      transition-property: width, height, background-color, font-size;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  @media screen and (min-width:601px) {
+    #animated{
+      width: 25vw;
+      height: 20vh;
+      background-color: blue;
+      font-size: 10px;
+      border: 10px solid rgb(128, 0, 0);
+      color: $yellow-theme;
+      position: inline-block;
+      /*top: 20vh;
+      left: 20vw; these 2 commands are being overwritten by something.*/
+      transition-property: width, height, background-color, font-size;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;}
+  
+  
+      #animated:hover {
+        width: 50vw;
+        height: 10vh;
+        display: block;
+        font-size: 2em;
+      }
+      #animated:active{
+        background-color: $red-theme;
+      }
+  
+      #specialCharacters{
+        width: 7vw;
+        height: 80vh;
+        display: block;
+        transition-property: width, height, background-color, font-size;
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
+      }
+    /*above is the celebrating 30 years animation and below is the 130,000 hours*/
+      #animated2{
+      width: 25vw;
+      height: 20vh;
+      background-color: blue;
+      font-size: 10px;
+      border: 10px solid rgb(128, 0, 0);
+      color: $yellow-theme;
+      position: inline-block;
+      /*top: 20vh;
+      left: 20vw; these 2 commands are being overwritten by something.*/
+      transition-property: width, height, background-color, font-size;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;}
+  
+  
+      #animated2:hover {
+        width: 45vw;
+        height: 40vh;
+        display: block;
+        font-size: 4em;
+      }
+      #animated2:active{
+        background-color: $red-theme;
+      }
+  
+      #specialCharacters2{
+        width: 7vw;
+        height: 80vh;
+        display: block;
+        transition-property: width, height, background-color, font-size;
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
+      }
+    }
+
+
+@media screen and (min-width:1500px) {
+
+  #animated{
+    width: 10vw;
+    height: 10vh;
+    background-color: blue;
+    font-size: 10px;
+    border: 10px solid rgb(128, 0, 0);
+    color: $yellow-theme;
+    position: inline-block;
+    /*top: 20vh;
+    left: 20vw; these 2 commands are being overwritten by something.*/
+    transition-property: width, height, background-color, font-size;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;}
+
+
+    #animated:hover {
+      width: 90vw;
+      height: 80vh;
+      display: block;
+      font-size: 12em;
+    }
+    #animated:active{
+      background-color: $red-theme;
+    }
+
+    #specialCharacters{
+      width: 7vw;
+      height: 80vh;
+      display: block;
+      transition-property: width, height, background-color, font-size;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;
+    }
+  /*above is the celebrating 30 years animation and below is the 130,000 hours*/
+    #animated2{
+    width: 10vw;
+    height: 10vh;
+    background-color: blue;
+    font-size: 10px;
+    border: 10px solid rgb(128, 0, 0);
+    color: $yellow-theme;
+    position: inline-block;
+    /*top: 20vh;
+    left: 20vw; these 2 commands are being overwritten by something.*/
+    transition-property: width, height, background-color, font-size;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;}
+
+
+    #animated2:hover {
+      width: 45vw;
+      height: 40vh;
+      display: block;
+      font-size: 6em;
+    }
+    #animated2:active{
+      background-color: $red-theme;
+    }
+
+    #specialCharacters2{
+      width: 7vw;
+      height: 80vh;
+      display: block;
+      transition-property: width, height, background-color, font-size;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+a > img {
+  display: inline-block;
+  height: 50px;
+}
